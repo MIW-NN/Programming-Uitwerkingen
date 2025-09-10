@@ -9,27 +9,34 @@ import java.util.Scanner;
 public class MethodesLauncher {
 
     public static void main(String[] args) {
-//        toonSterrenRij();
-//        toonSterrenVierkant();
+        // 3.1.1 Sterrenrij
+        toonSterrenRij();
+
+        // 3.1.2 Sterrenvierkant
+        toonSterrenVierkant();
 
         Scanner toetsenbord = new Scanner(System.in);
 
         // 3.1.3 Herhaal woord
-//        System.out.print("Welk woord wil je vijf keer zien? ");
-//        String woord = toetsenbord.next();
-//        toonWoordVijfKeer(woord);
+        System.out.print("Welk woord wil je vijf keer zien? ");
+        String woord = toetsenbord.next();
+        toonWoordVijfKeer(woord);
 
         // 3.1.4 Wisselgeld
-//        System.out.print("Hoeveel moet je betalen? ");
-//        double teBetalen = toetsenbord.nextDouble();
-//
-//        System.out.print("Hoeveel heb je gegeven? ");
-//        double betaald = toetsenbord.nextDouble();
-//
-//        double wisselgeld = berekenWisselgeld(teBetalen, betaald);
-//        System.out.println("Wisselgeld: " + wisselgeld);
+        System.out.print("Hoeveel moet je betalen? ");
+        double teBetalen = toetsenbord.nextDouble();
 
-//        eerlijkDelen(toetsenbord);
+        System.out.print("Hoeveel heb je gegeven? ");
+        double betaald = toetsenbord.nextDouble();
+
+        double wisselgeld = berekenWisselgeld(teBetalen, betaald);
+        System.out.println("Wisselgeld: " + wisselgeld);
+
+        // 3.1.5 Eerlijk delen
+        eerlijkDelen(toetsenbord);
+
+        // 3.1.6 Wisselgeld gevorderd
+        wisselgeldGevorderd(toetsenbord);
     }
 
     public static void toonSterrenRij() {
@@ -76,6 +83,7 @@ public class MethodesLauncher {
         teBetalen = rondAfOpVijfCent(teBetalen);
         double wisselgeld = berekenWisselgeld(teBetalen, betaald);
 
+        System.out.println();
         System.out.println("Je krijgt " + wisselgeld + " terug.");
     }
 
