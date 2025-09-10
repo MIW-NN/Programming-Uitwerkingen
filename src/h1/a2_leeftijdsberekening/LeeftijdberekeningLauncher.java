@@ -6,7 +6,8 @@ import java.util.Scanner;
  * @author Vincent Velthuizen
  * Bereken iemands leeftijd en geef een groet.
  */
-public class LeeftijdsberekeningLauncher {
+public class LeeftijdberekeningLauncher {
+    private static final int HUIDIGE_JAAR = 2025;
 
     public static void main(String[] args) {
         Scanner toetsenbord = new Scanner(System.in);
@@ -17,10 +18,9 @@ public class LeeftijdsberekeningLauncher {
         System.out.print("Wat is je geboortejaar? ");
         int geboortejaar = toetsenbord.nextInt();
 
-        int huidigeJaar = 2025;
-        int leeftijd = huidigeJaar - geboortejaar;
+        int leeftijd = HUIDIGE_JAAR - geboortejaar;
 
         System.out.println();
-        System.out.println("Beste " + naam + ", eind " + huidigeJaar + " zal je leeftijd " + leeftijd + " jaar zijn.");
+        System.out.println("Beste " + naam + ", eind " + HUIDIGE_JAAR + " zal je leeftijd " + leeftijd + " zijn.");
     }
 }
