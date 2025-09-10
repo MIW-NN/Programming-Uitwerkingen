@@ -88,6 +88,7 @@ public class MethodesLauncher {
     }
 
     private static double rondAfOpVijfCent(double bedrag) {
-        return Math.round(bedrag * 20) / 20.0;
+        double factor = 20.0;
+        return Math.round(bedrag * factor) / factor;
     }
 }
