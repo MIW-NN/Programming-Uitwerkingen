@@ -11,6 +11,9 @@ public class WisselkantoorLauncher {
     private static final double TRANSACTIEKOSTEN_PERCENTAGE = 1.5;
     private static final int MINIMALE_TRANSACTIEKOSTEN = 2;
     private static final int MAXIMALE_TRANSACTIEKOSTEN = 15;
+    private static final double KOERS_EURO_DOLLAR = 1.23843;
+    private static final double KOERS_EURO_POND = 0.88459;
+    private static final double KOERS_EURO_YEN = 134.64711;
 
     public static void main(String[] args) {
         Scanner toetsenbord = new Scanner(System.in);
@@ -45,16 +48,18 @@ public class WisselkantoorLauncher {
         
         switch (valuta) {
             case "dollar":
-                koers = 1.23843;
+                koers = KOERS_EURO_DOLLAR;
                 break;
             case "pond":
-                koers = 0.88459;
+                koers = KOERS_EURO_POND;
                 break;
             case "yen":
-                koers = 134.64711;
+                koers = KOERS_EURO_YEN;
                 break;
             default:
                 koers = 0.0; // wat is een goede default hier?
+                // door 0 te kiezen geven we als resultaat bij ons krijg je 0 van een valuta die we niet kennen
+                // dat lijkt me geen gekke keuze.
         }
         
         wisselEnToon(bedrag, valuta, koers);
