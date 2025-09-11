@@ -66,12 +66,13 @@ public class WisselkantoorLauncher {
     }
 
     private static void wisselEnToon(int bedrag, String valuta, double koers) {
-//        double omgerekendeBedrag = rondAf(bedrag * koers);
+
+//        double omgerekendeBedrag = rondAf(bedrag * koers); // versie voor 3.3.1
         int omgerekendeBedrag = (int) (bedrag * koers);
         System.out.println("U krijg hiervoor " + omgerekendeBedrag + " " + valuta + ". (koers " + koers + ")");
     }
 
-    public static double rondAf(double getal) {
+    public static double rondAf(double getal) { // nodig voor 3.3.1
         double factor = 100.0;
         return Math.round(getal * factor) / factor;
     }
