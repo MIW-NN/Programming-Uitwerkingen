@@ -1,4 +1,4 @@
-package h4.a4_oppervlakteberekening;
+package h4.a1_oppervlakteberekening;
 
 import java.util.Scanner;
 
