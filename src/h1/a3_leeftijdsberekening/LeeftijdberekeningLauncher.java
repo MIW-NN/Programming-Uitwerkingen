@@ -1,4 +1,4 @@
-package h1.a2_leeftijdsberekening;
+package h1.a3_leeftijdsberekening;
 
 import java.util.Scanner;
 
