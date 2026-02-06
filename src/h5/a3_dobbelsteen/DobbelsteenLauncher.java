@@ -23,7 +23,7 @@ public class DobbelsteenLauncher {
 
             // Ik toon de dobbelsteen dus steeds twee keer om te laten zien dat beide methoden gelijk zijn.
             toonDobbelsteenV1(worp, oog);
-            toonDobbelsteenV2(worp, (char) (oog + 1));
+            toonDobbelsteenV2(worp, oog);
         } while (worp != 6);
     }
 
